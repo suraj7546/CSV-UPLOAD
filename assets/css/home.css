@@ -2,7 +2,7 @@
     height:400px;
     display: flex;
     flex-direction: column;
-    margin-top: 30px;
+    margin-top: 10px;
 }
 .center-text h1 {
     font-size: 44px;
@@ -17,7 +17,7 @@
   margin-top: 10px;
 }
 .input-container {
-    margin-top: 10px;
+    
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -37,3 +37,17 @@
   font-size: 16px;
   border-radius: 7px;
 }
+.uploaded-files{
+    color: #f8f8f8;
+    font-family: Franklin Gothic;
+    text-align: center;
+    background-color: rgb(102, 147, 112);
+    margin-top: 50px;
+}
+.no-file {
+    margin-top: 10px;
+    font-size: 22px;
+    color: steelblue;
+    font-family: Franklin Gothic;
+    text-align: center;
+  }
