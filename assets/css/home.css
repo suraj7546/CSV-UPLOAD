@@ -1,0 +1,39 @@
+.container{
+    height:400px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+.center-text h1 {
+    font-size: 44px;
+    font-family: Franklin Gothic Medium;
+    text-align: center;
+  }
+  .center-text p {
+  font-size: 22px;
+  font-family: Franklin Gothic;
+  text-align: center;
+  color: gray;
+  margin-top: 10px;
+}
+.input-container {
+    margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 70%;
+  height: 150px;
+  background-color: #f8f8f8;
+  border: 2px dashed lightgrey;
+}
+.upload-btn {
+  width: 130px;
+  height: 40px;
+  border: none;
+  background-color: #4b88fd;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 7px;
+}
