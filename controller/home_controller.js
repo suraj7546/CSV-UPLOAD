@@ -1,14 +1,17 @@
-const home = async (req, res) => {
+/** ------------------ IMPORTING PACKAGE/MODELS ------------------ **/
+const File = require("../models/csv");
+
+/** ------------------ EXPORTING FUNCTION To open home page ------------------ **/
+module.exports.home = async function (req, res) {
   try {
+    let file = await File.find({});
+
     return res.render("layout", {
+      files: file,
       title: "Home",
-      file: "file",
     });
   } catch (error) {
-    if (error) {
-      console.log("Error in homeController/home", error);
-    }
+    console.log("Error in homeController/home", error);
+    return;
   }
 };
-
-module.exports = { home };

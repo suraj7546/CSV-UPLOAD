@@ -1,0 +1,69 @@
+<!-- Include local CSS files for styling -->
+<link rel="stylesheet" type="text/css" href="../css/file_viewer.css"> <!-- CSS for body -->
+<link rel="stylesheet" type="text/css" href="../css/header.css"> <!-- CSS for header -->
+
+<!-- Header section -->
+<div class="nav-bar" style="position: fixed;">
+    <a href="/" class="custom-button">
+        <!-- Back arrow icon -->
+        <i class="fa-solid fa-circle-arrow-left" style="color: #b8b8b8; font-size: 100px;"></i>&#8249;
+
+    </a>
+    <div class="title">
+        <!-- Main title -->
+        CSV Upload
+    </div>
+    <div class="sub-title">
+        <!-- Subtitle -->
+        Viewer
+    </div>
+    <div class="file-name">
+        <!-- Display the file name (dynamic content) -->
+        <%= fileName %>
+    </div>
+</div>
+
+<!-- Search bar section -->
+<div class="search-bar">
+    <form id="searchForm">
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="Search data...">
+            <button id="go" class="search-btn" type="button">Go</button>
+        </div>
+    </form>
+    <div>
+        <p id="total-rows">
+            <!-- Display total rows (dynamic content) -->
+            Total Rows: <%= length %>
+        </p>
+    </div>
+</div>
+
+<!-- Search results section -->
+<div>
+    <table>
+        <thead>
+            <tr>
+                <!-- Loop through and display table headers -->
+                <% for (let h of head) { %>
+                    <th>
+                        <%= h %>
+                    </th>
+                <% } %>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Loop through and display table data rows -->
+            <% for (let row of data) { %>
+                <tr>
+                    <% for (let key of Object.keys(row)) { %>
+                        <td>
+                            <!-- Display cell data (dynamic content) -->
+                            <%= row[key] %>
+                        </td>
+                    <% } %>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+</div>
